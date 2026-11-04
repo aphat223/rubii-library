@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#fff4f0">
+<title>Rubii Library ♡</title>
+<style>
+:root{--bg:#fff5f0;--panel:#fffdfb;--panel2:#fff0eb;--ink:#795b59;--muted:#ae8d87;--line:#f1ded7;--pink:#f5d7e3;--peach:#f5c9aa;--accent:#c8899b;--accent2:#b98270;--shadow:0 8px 24px #b98b7b18;--field:#fff7f4}
+[data-theme="dark"]{--bg:#211d23;--panel:#2d2630;--panel2:#392d38;--ink:#f0dce3;--muted:#b99eaa;--line:#4b3b49;--pink:#503847;--peach:#574237;--accent:#e3a9c0;--accent2:#e5b091;--shadow:0 8px 24px #0003;--field:#342b35}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;transition:.2s}button,input,textarea,select{font:inherit}button{cursor:pointer;border:0} .app{max-width:760px;margin:auto;padding:18px 15px 90px}.top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:5px 0 18px}.brand{font-size:27px;font-weight:850;letter-spacing:-1px;color:var(--accent2)}.sub{font-size:11px;color:var(--muted);letter-spacing:1.3px}.iconbtn,.softbtn{background:var(--panel);color:var(--ink);border:1px solid var(--line);border-radius:14px;padding:10px 12px;box-shadow:var(--shadow)}.hero{background:linear-gradient(120deg,var(--pink),var(--peach));border-radius:22px;padding:18px;margin-bottom:16px;color:#805d61;box-shadow:var(--shadow)}.hero h1{font-size:21px;margin:0 0 5px}.hero p{margin:0;font-size:12px;opacity:.8}.search{display:flex;gap:9px;background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:11px 13px;margin:15px 0}.search input{border:0;outline:0;background:transparent;color:var(--ink);width:100%;font-size:14px}.sectionhead{display:flex;justify-content:space-between;align-items:center;margin:19px 2px 11px}.sectionhead h2{font-size:15px;margin:0}.tiny{font-size:11px;color:var(--muted)}.grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:11px}.cat{position:relative;text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:19px;padding:14px;min-height:119px;color:var(--ink);box-shadow:var(--shadow);overflow:hidden}.cat:after{content:"";position:absolute;width:65px;height:65px;border-radius:50%;right:-20px;top:-22px;background:var(--tint);opacity:.65}.cat .emoji{font-size:25px;display:block;margin-bottom:10px}.cat strong{display:block;font-size:12px;letter-spacing:.4px}.cat small{display:block;color:var(--muted);font-size:11px;margin-top:4px}.cat .count{position:absolute;right:12px;bottom:12px;font-size:10px;color:var(--muted)}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.pill{background:var(--panel2);color:var(--accent2);padding:8px 11px;border-radius:99px;font-size:11px}.back{display:flex;align-items:center;gap:8px;background:none;color:var(--accent2);padding:8px 0;font-weight:700}.detailhero{background:linear-gradient(120deg,var(--pink),var(--peach));border-radius:20px;padding:16px;color:#805d61;margin:10px 0 15px}.detailhero .bigemoji{font-size:28px}.detailhero h2{margin:7px 0 4px;font-size:19px}.detailhero p{margin:0;font-size:12px}.snippet{background:var(--panel);border:1px solid var(--line);border-radius:15px;padding:11px;margin:10px 0;box-shadow:var(--shadow)}.snippethead{display:flex;align-items:center;justify-content:space-between;margin-bottom:7px}.snippethead b{font-size:11px;letter-spacing:.4px}.rowcopy{display:flex;align-items:center;gap:8px;min-width:0}.previewtext{min-width:0;flex:1;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;background:var(--field);border:1px solid var(--line);border-radius:10px;padding:10px;font-family:ui-monospace,SFMono-Regular,monospace;font-size:11px;color:var(--ink)}.copy{flex:0 0 39px;width:39px;height:39px;border-radius:11px;background:var(--pink);color:var(--accent2);font-size:17px}.edit{background:var(--panel2);color:var(--muted);border-radius:9px;padding:6px 8px;font-size:10px}.actions{display:flex;gap:8px;margin:15px 0}.primary{background:var(--accent);color:white;border-radius:13px;padding:11px 14px;font-weight:700;font-size:12px;flex:1}.secondary{background:var(--panel2);color:var(--accent2);border:1px solid var(--line);border-radius:13px;padding:11px 14px;font-weight:700;font-size:12px}.preview{background:var(--panel);border:1px solid var(--line);border-radius:17px;padding:14px;margin-top:16px}.preview h3{font-size:13px;margin:0 0 10px}.mockui{background:linear-gradient(135deg,#fff0f3,#f8d5c2);border-radius:14px;padding:15px;color:#805d61}.mockui .date{font-size:11px;letter-spacing:1px}.mockui .time{font-size:29px;font-weight:800;margin:3px 0}.mockui .status{display:inline-block;background:#fff9;border-radius:20px;padding:5px 9px;font-size:10px}.empty{text-align:center;padding:28px;color:var(--muted);font-size:13px}.modal{position:fixed;inset:0;background:#241b22a8;display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:5}.modal.show{display:flex}.sheet{width:min(100%,600px);max-height:90vh;overflow:auto;background:var(--panel);border-radius:22px;padding:18px;box-shadow:0 20px 60px #0004}.sheet h3{margin:0 0 14px}.field{display:block;margin:11px 0}.field span{display:block;font-size:11px;color:var(--muted);margin-bottom:5px}.field input,.field textarea,.field select{width:100%;border:1px solid var(--line);background:var(--field);color:var(--ink);border-radius:11px;padding:11px;outline:none;font-size:13px}.field textarea{min-height:85px;resize:vertical;font-family:ui-monospace,monospace}.modalactions{display:flex;gap:8px;margin-top:15px}.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#795b59;color:white;padding:10px 15px;border-radius:99px;font-size:12px;opacity:0;pointer-events:none;transition:.2s;z-index:9}.toast.show{opacity:1}.footer{text-align:center;color:var(--muted);font-size:10px;margin-top:26px}.hide{display:none!important}
+@media(min-width:600px){.app{padding-top:25px}.grid{grid-template-columns:repeat(3,minmax(0,1fr))}.modal{align-items:center}}
+</style>
+</head>
+<body>
+<div class="app">
+<header class="top">
+ <div><div class="brand">Rubii Library ♡</div><div class="sub">MY LITTLE CODE COLLECTION 🍑</div></div>
+ <button class="iconbtn" id="themeBtn" aria-label="สลับโหมด">🌙</button>
+</header>
+<section class="hero"><h1>เก็บโค้ดให้เป็นระเบียบ ✿</h1><p>คลัง UI ส่วนตัวสำหรับ Rubii · แตะหมวดหมู่เพื่อเปิดชุดโค้ด</p></section>
+<div class="search"><span>⌕</span><input id="search" placeholder="ค้นหาหมวดหมู่หรือโค้ด..."></div>
+<section id="home">
+ <div class="sectionhead"><h2>♡ MY COLLECTION</h2><button class="softbtn" id="addCat">＋ เพิ่มหมวด</button></div>
+ <div class="grid" id="categories"></div>
+</section>
+<section id="detail" class="hide">
+ <button class="back" id="back">← กลับไปคลังโค้ด</button>
+ <div class="detailhero"><div class="bigemoji" id="dEmoji">🍑</div><h2 id="dTitle">DATE & TIME</h2><p id="dDesc">ชุดโค้ดสำหรับ UI</p></div>
+ <div class="toolbar"><button class="pill" id="copyAll">▣ คัดลอกทั้งชุด</button><button class="pill" id="addSnippet">＋ เพิ่มรายการ</button><button class="pill" id="renameCat">✎ แก้ไขหมวด</button></div>
+ <div id="snippets"></div>
+ <div class="preview"><h3>♡ LIVE PREVIEW</h3><div class="mockui"><div class="date">WEDNESDAY · 04 NOVEMBER 2026</div><div class="time">09:30</div><span class="status">✿ UNIVERSITY · MAIN HALL</span></div><p class="tiny">ตัวอย่างหน้าตาประกอบการจัดเก็บ — ปรับแต่งได้ด้วยโค้ดของคุณ</p></div>
+ <div class="actions"><button class="secondary" id="deleteCat">ลบหมวดหมู่นี้</button></div>
+</section>
+<div class="footer">made with love ♡ for rubii creators</div>
+</div>
+<div class="modal" id="modal"><div class="sheet"><h3 id="modalTitle">เพิ่มรายการ</h3><div id="modalFields"></div><div class="modalactions"><button class="secondary" id="cancel">ยกเลิก</button><button class="primary" id="save">บันทึก</button></div></div></div>
+<div class="toast" id="toast">คัดลอกแล้ว ♡</div>
+<script>
+const defaults=[
+ {id:'date',name:'DATE & TIME',desc:'วันที่และเวลา',emoji:'🍑',tint:'#f8dce7',items:[
+  ['CSS CODE','.time-card{background:#fff4f0;color:#795b59;border-radius:14px;padding:12px;}'],
+  ['REGEX / นิพจน์','\\[TIME\\|([^\\]]+)\\]'],
+  ['ข้อความแทนที่','<div class="time-card">$1</div>'],
+  ['ข้อความตัวอย่าง','[TIME|04 NOV 2026|WED|09:30]'],
+  ['PROMPT คำสั่ง','สร้าง UI วันที่และเวลา ธีมชมพูแอปริคอต รองรับมือถือ และใช้กับ Rubii AI']
+ ]},
+ {id:'status',name:'STATUS UI',desc:'สถานะและข้อมูลตัวละคร',emoji:'🌷',tint:'#f7d2c3',items:[
+  ['CSS CODE','.status-card{background:#fff0eb;border:1px solid #f1ded7;border-radius:16px;padding:14px;}'],
+  ['REGEX / นิพจน์','\\[STATUS\\]([\\s\\S]*?)\\[/STATUS\\]'],
+  ['ข้อความแทนที่','<section class="status-card">$1</section>'],
+  ['ข้อความตัวอย่าง','[STATUS]MOOD: HAPPY | LOCATION: HOME[/STATUS]'],
+  ['PROMPT คำสั่ง','สร้าง Status UI แสดงอารมณ์ ความสัมพันธ์ สถานที่ และข้อมูลปัจจุบัน โดยไม่ควบคุมการกระทำของผู้ใช้']
+ ]},
+ {id:'phone',name:'PHONE UI',desc:'โทรศัพท์และแอปต่าง ๆ',emoji:'📱',tint:'#f0d9e8',items:[
+  ['CSS CODE','.phone-ui{max-width:360px;margin:auto;background:#fff7f4;border-radius:24px;padding:16px;}'],
+  ['REGEX / นิพจน์','\\[PHONE\\]([\\s\\S]*?)\\[/PHONE\\]'],
+  ['ข้อความแทนที่','<div class="phone-ui">$1</div>'],
+  ['ข้อความตัวอย่าง','[PHONE]09:30 | 3 MISSED CALLS[/PHONE]'],
+  ['PROMPT คำสั่ง','ออกแบบ UI โทรศัพท์มือถือ มีหน้าจอหลัก แชต แจ้งเตือน สายโทรเข้า และแอปโซเชียล']
+ ]},
+ {id:'character',name:'CHARACTER',desc:'แนะนำตัวละครและโปรไฟล์',emoji:'🧸',tint:'#f6dfcf',items:[
+  ['CSS CODE','.profile-card{background:#fffdfb;border-radius:18px;padding:16px;border:1px solid #f1ded7;}'],
+  ['REGEX / นิพจน์','\\[PROFILE\\]([\\s\\S]*?)\\[/PROFILE\\]'],
+  ['ข้อความแทนที่','<div class="profile-card">$1</div>'],
+  ['ข้อความตัวอย่าง','[PROFILE]NAME: TYPE | AGE: 21[/PROFILE]'],
+  ['PROMPT คำสั่ง','สร้างการ์ดแนะนำตัวละครที่อ่านง่าย แบ่งข้อมูลเป็นหัวข้อ และรองรับหน้าจอมือถือ']
+ ]},
+ {id:'relation',name:'RELATIONSHIP',desc:'ความสัมพันธ์และความรู้สึก',emoji:'💗',tint:'#f8dce7',items:[
+  ['CSS CODE','.relation{background:#fff0f3;border-radius:14px;padding:12px;color:#805d61;}'],
+  ['REGEX / นิพจน์','\\[RELATION\\]([\\s\\S]*?)\\[/RELATION\\]'],
+  ['ข้อความแทนที่','<div class="relation">$1</div>'],
+  ['ข้อความตัวอย่าง','[RELATION]CLOSE FRIEND · TRUST 80%[/RELATION]'],
+  ['PROMPT คำสั่ง','สร้าง UI แสดงระดับความสัมพันธ์และความรู้สึก โดยอัปเดตตามเหตุการณ์ในเรื่อง']
+ ]},
+ {id:'social',name:'SOCIAL MEDIA',desc:'โพสต์ ฟีด และคอมเมนต์',emoji:'🍓',tint:'#eadcf0',items:[
+  ['CSS CODE','.social-post{background:#fff;border-radius:16px;padding:14px;margin:10px 0;}'],
+  ['REGEX / นิพจน์','\\[POST\\]([\\s\\S]*?)\\[/POST\\]'],
+  ['ข้อความแทนที่','<article class="social-post">$1</article>'],
+  ['ข้อความตัวอย่าง','[POST]NEW POST · 128 LIKES · 12 COMMENTS[/POST]'],
+  ['PROMPT คำสั่ง','สร้างฟีดโซเชียลที่มีโพสต์ รูปภาพ ยอดไลก์ คอมเมนต์ และแจ้งเตือน']
+ ]},
+ {id:'chat',name:'CHAT SYSTEM',desc:'แชตและบทสนทนา',emoji:'💌',tint:'#f6d7cc',items:[
+  ['CSS CODE','.chat-bubble{padding:10px 13px;border-radius:16px;background:#f8dce7;margin:6px 0;max-width:85%;}'],
+  ['REGEX / นิพจน์','\\[CHAT\\]([\\s\\S]*?)\\[/CHAT\\]'],
+  ['ข้อความแทนที่','<div class="chat-bubble">$1</div>'],
+  ['ข้อความตัวอย่าง','[CHAT]TYPE: ถึงไหนแล้ว?[/CHAT]'],
+  ['PROMPT คำสั่ง','สร้างหน้าตาแชตสมจริง แยกผู้ส่ง เวลาอ่านข้อความ และสถานะการส่ง']
+ ]},
+ {id:'custom',name:'CUSTOM UI',desc:'UI อื่น ๆ ของฉัน',emoji:'🎀',tint:'#f5dfeb',items:[
+  ['CSS CODE','/* วาง CSS ของคุณที่นี่ */'],
+  ['REGEX / นิพจน์','/* วาง Regex ของคุณที่นี่ */'],
+  ['ข้อความแทนที่','/* วางข้อความแทนที่ที่นี่ */'],
+  ['ข้อความตัวอย่าง','/* วางข้อความตัวอย่างที่นี่ */'],
+  ['PROMPT คำสั่ง','เขียนคำสั่งที่ต้องการเก็บไว้ที่นี่']
+ ]}
+];
+let data=load(),current=null,editingIndex=null,modalMode='snippet';
+function load(){try{return JSON.parse(localStorage.getItem('rubiiLibraryData'))||defaults.map(x=>structuredClone(x))}catch(e){return defaults.map(x=>JSON.parse(JSON.stringify(x)))}}
+function persist(){localStorage.setItem('rubiiLibraryData',JSON.stringify(data))}
+function esc(s){return String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}
+function renderCats(){let q=document.getElementById('search').value.toLowerCase();let el=document.getElementById('categories');el.innerHTML='';data.filter(c=>(c.name+' '+c.desc).toLowerCase().includes(q)).forEach(c=>{let b=document.createElement('button');b.className='cat';b.style.setProperty('--tint',c.tint||'#f8dce7');b.innerHTML=`<span class="emoji">${esc(c.emoji)}</span><strong>${esc(c.name)}</strong><small>${esc(c.desc)}</small><span class="count">${c.items.length} ITEMS ›</span>`;b.onclick=()=>openCat(c.id);el.appendChild(b)});if(!el.children.length)el.innerHTML='<div class="empty">ไม่พบหมวดหมู่ที่ค้นหา ♡</div>'}
+function openCat(id){current=id;let c=data.find(x=>x.id===id);if(!c)return;document.getElementById('home').classList.add('hide');document.getElementById('detail').classList.remove('hide');document.getElementById('dEmoji').textContent=c.emoji;document.getElementById('dTitle').textContent=c.name;document.getElementById('dDesc').textContent=c.desc;renderSnippets();window.scrollTo(0,0)}
+function renderSnippets(){let c=data.find(x=>x.id===current);let el=document.getElementById('snippets');el.innerHTML='';c.items.forEach((it,i)=>{let box=document.createElement('div');box.className='snippet';box.innerHTML=`<div class="snippethead"><b>${esc(it[0])}</b><button class="edit">แก้ไข</button></div><div class="rowcopy"><div class="previewtext" title="${esc(it[1])}">${esc(it[1])||'ยังไม่มีข้อความ'}</div><button class="copy" aria-label="คัดลอก">▢</button></div>`;box.querySelector('.copy').onclick=()=>copy(it[1]);box.querySelector('.edit').onclick=()=>showSnippetModal(i);el.appendChild(box)})}
+function copy(s){if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(s).then(()=>toast('คัดลอกแล้ว ♡')).catch(()=>fallback(s))}else fallback(s)}
+function fallback(s){let t=document.createElement('textarea');t.value=s;document.body.appendChild(t);t.select();try{document.execCommand('copy');toast('คัดลอกแล้ว ♡')}catch(e){toast('คัดลอกไม่สำเร็จ กรุณาเลือกข้อความเอง')}t.remove()}
+function toast(s){let t=document.getElementById('toast');t.textContent=s;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),1500)}
+function showModal(title,fields,onSave){document.getElementById('modalTitle').textContent=title;let host=document.getElementById('modalFields');host.innerHTML='';fields.forEach(f=>{let l=document.createElement('label');l.className='field';l.innerHTML=`<span>${esc(f.label)}</span>`;let input=document.createElement(f.area?'textarea':'input');input.value=f.value||'';input.placeholder=f.placeholder||'';input.dataset.key=f.key;l.appendChild(input);host.appendChild(l)});document.getElementById('modal').classList.add('show');document.getElementById('save').onclick=()=>{let vals={};host.querySelectorAll('input,textarea').forEach(x=>vals[x.dataset.key]=x.value);onSave(vals);document.getElementById('modal').classList.remove('show')}}
+function showSnippetModal(i){let c=data.find(x=>x.id===current),it=i===null?['','']:c.items[i];showModal(i===null?'เพิ่มรายการใหม่':'แก้ไขรายการ',[{key:'name',label:'ชื่อหัวข้อ',value:it[0]},{key:'value',label:'ข้อความ / โค้ด',value:it[1],area:true}],v=>{if(i===null)c.items.push([v.name,v.value]);else c.items[i]=[v.name,v.value];persist();renderSnippets()})}
+document.getElementById('back').onclick=()=>{document.getElementById('detail').classList.add('hide');document.getElementById('home').classList.remove('hide');current=null;renderCats();window.scrollTo(0,0)};
+document.getElementById('search').addEventListener('input',()=>{if(!current)renderCats();else{let q=document.getElementById('search').value.toLowerCase();document.getElementById('snippets').querySelectorAll('.snippet').forEach((x,i)=>x.classList.toggle('hide',!(data.find(c=>c.id===current).items[i][0]+' '+data.find(c=>c.id===current).items[i][1]).toLowerCase().includes(q))) }});
+document.getElementById('addSnippet').onclick=()=>showSnippetModal(null);
+document.getElementById('copyAll').onclick=()=>{let c=data.find(x=>x.id===current);copy(c.items.map(x=>x[0]+'\n'+x[1]).join('\n\n'))};
+document.getElementById('addCat').onclick=()=>showModal('เพิ่มหมวดหมู่',[{key:'name',label:'ชื่อหมวดหมู่'},{key:'desc',label:'คำอธิบาย'},{key:'emoji',label:'อีโมจิประจำหมวด',value:'🍑'}],v=>{data.push({id:'c'+Date.now(),name:v.name||'NEW CATEGORY',desc:v.desc||'',emoji:v.emoji||'🍑',tint:'#f8dce7',items:[['CSS CODE',''],['REGEX / นิพจน์',''],['ข้อความแทนที่',''],['ข้อความตัวอย่าง',''],['PROMPT คำสั่ง','']]});persist();renderCats()});
+document.getElementById('renameCat').onclick=()=>{let c=data.find(x=>x.id===current);showModal('แก้ไขหมวด',[{key:'name',label:'ชื่อหมวดหมู่',value:c.name},{key:'desc',label:'คำอธิบาย',value:c.desc},{key:'emoji',label:'อีโมจิ',value:c.emoji}],v=>{c.name=v.name;c.desc=v.desc;c.emoji=v.emoji;persist();openCat(current)})};
+document.getElementById('deleteCat').onclick=()=>{if(confirm('ต้องการลบหมวดหมู่นี้ใช่ไหม?')){data=data.filter(x=>x.id!==current);persist();document.getElementById('detail').classList.add('hide');document.getElementById('home').classList.remove('hide');current=null;renderCats()}};
+document.getElementById('cancel').onclick=()=>document.getElementById('modal').classList.remove('show');
+document.getElementById('modal').addEventListener('click',e=>{if(e.target.id==='modal')e.currentTarget.classList.remove('show')});
+document.getElementById('themeBtn').onclick=()=>{let next=document.documentElement.dataset.theme==='dark'?'light':'dark';document.documentElement.dataset.theme=next;localStorage.setItem('rubiiTheme',next);document.getElementById('themeBtn').textContent=next==='dark'?'☀️':'🌙';document.querySelector('meta[name="theme-color"]').content=next==='dark'?'#211d23':'#fff4f0'};
+let theme=localStorage.getItem('rubiiTheme')||'light';document.documentElement.dataset.theme=theme;document.getElementById('themeBtn').textContent=theme==='dark'?'☀️':'🌙';renderCats();
+</script>
+</body>
+</html>
